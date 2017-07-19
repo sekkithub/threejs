@@ -1,0 +1,23 @@
+/* =======================
+   Utilities/Constrain
+   ======================= */
+
+.u-constrain--huge {
+  max-width: 1400px;
+}
+
+.u-constrain--large {
+  max-width: 1280px;
+}
+
+.u-constrain {
+  max-width: 1024px;
+}
+
+.u-constrain--small {
+  max-width: 768px;
+}
+
+.u-constrain--tiny {
+  max-width: 600px;
+}

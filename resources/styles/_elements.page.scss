@@ -1,0 +1,41 @@
+/* =======================
+   Elements/Page
+   ======================= */
+
+html, body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+
+}
+
+body {
+  &:after {
+    display: none;
+    content: 'mobile';
+  }
+
+  @include mq($from: tablet) {
+    &:after {
+      content: 'tablet';
+    }
+  }
+
+  @include mq($from: desktop) {
+    &:after {
+      content: 'desktop';
+    }
+  }
+
+  @include mq($from: wide) {
+    &:after {
+      content: 'desktop';
+    }
+  }
+}

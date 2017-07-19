@@ -1,0 +1,60 @@
+/* =======================
+   Components/Buttons
+   ======================= */
+.c-button {
+}
+
+  .c-button__button {
+    background-color: color(black);
+    border: 3px solid color(black);
+    cursor: pointer;
+    max-width: 100%;
+    outline: none;
+    padding: $unit-small $unit-large;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s;
+    width: 100%;
+
+    @include mq($from: tablet) {
+      max-width: 480px;
+    }
+
+    @include mq($from: desktop) {
+      max-width: 100%;
+      width: inherit;
+    }
+
+    &:hover {
+      background-color: color(white);
+    }
+
+    &:hover .c-button__text,
+    &:hover .c-button__angle-right {
+      color: color(black)
+    }
+  }
+
+    .c-button__text,
+    .c-button__angle-right {
+      color: color(white);
+      transition: all .2s;
+    }
+
+    .c-button__text {
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      @include font-family(bold);
+      @include font-size(14px);
+    }
+
+    .c-button__angle-right {
+      margin-left: $unit-small;
+      position: absolute;
+      right: $unit-small * 1.5;
+      top: 50%;
+      transform: translateY(-50%);
+      @include font-size(14px);
+    }

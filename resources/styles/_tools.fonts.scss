@@ -1,0 +1,53 @@
+/* =======================
+   Tools/Fonts
+   ======================= */
+
+@mixin font-weight($font-weight) {
+  @if ($font-weight == "thin")          { font-weight: 100; }
+  @if ($font-weight == "ultra-light")   { font-weight: 200; }
+  @if ($font-weight == "light")         { font-weight: 300; }
+  @if ($font-weight == "normal")        { font-weight: 400; }
+  @if ($font-weight == "medium")        { font-weight: 500; }
+  @if ($font-weight == "semi-bold")     { font-weight: 600; }
+  @if ($font-weight == "bold")          { font-weight: 700; }
+  @if ($font-weight == "ultra-bold")    { font-weight: 800; }
+  @if ($font-weight == "heavy")         { font-weight: 900; }
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Bold";
+  src: 	 url("/fonts/CircularStd-Bold/lineto-circular-bold-c.eot");
+  src: 	 url("/fonts/CircularStd-Bold/lineto-circular-bold-c.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/CircularStd-Bold/lineto-circular-bold-c.woff") format("woff"),
+  url("/fonts/CircularStd-Bold/lineto-circular-bold-c.ttf") format("truetype"),
+  url("/fonts/CircularStd-Bold/lineto-circular-bold-c.svg#LLCircularWeb-Bold") format("svg");
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Book";
+  src: 	 url("/fonts/CircularStd-Book/lineto-circular-book-c.eot");
+  src: 	 url("/fonts/CircularStd-Book/lineto-circular-book-c.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/CircularStd-Book/lineto-circular-book-c.woff") format("woff"),
+  url("/fonts/CircularStd-Book/lineto-circular-book-c.ttf") format("truetype"),
+  url("/fonts/CircularStd-Book/lineto-circular-book-c.svg#LLCircularWeb-Book") format("svg");
+}
+
+@mixin font-family($font-family) {
+  @if ($font-family == "book") { font-family: 'LLCircularWeb-Book', Arial, sans-serif; }
+  @if ($font-family == "bold") { font-family: 'LLCircularWeb-Bold', Arial, sans-serif; }
+}
+
+@mixin font-size($args...) {
+  @include inuit-font-size($args...);
+}
+
+@mixin icon-styles {
+  display: inline-block;
+  font: normal normal normal 14px/1 "Black Tie";
+  font-size: inherit;
+  vertical-align: -14.28571429%;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0,0);
+}

@@ -1,0 +1,39 @@
+/* =======================
+   Objects/Wrapper
+   ======================= */
+
+.o-layout--equal-height {
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.o-layout__item {
+  .o-layout--equal-height & {
+    display: flex;
+  }
+}
+
+.o-layout--middle {
+  .o-layout--equal-height {
+    align-items: center;
+  }
+}
+
+.o-layout--bottom {
+  .o-layout--equal-height {
+    align-items: flex-end;
+  }
+}
+
+.o-layout--right {
+  .o-layout--equal-height {
+    justify-content: flex-end;
+  }
+}
+
+.o-layout--center {
+  .o-layout--equal-height {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,11 @@
+/* =======================
+   Utilities/Text Size
+   ======================= */
+
+.u-body-copy-small {
+  @include body-copy-small;
+}
+
+.u-body-copy-large {
+  @include body-copy-large;
+}

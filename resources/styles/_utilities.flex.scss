@@ -1,0 +1,24 @@
+/* =======================
+   Utilities/Flex
+   ======================= */
+.u-flex {
+  display: flex;
+}
+
+.u-flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.u-flex--right {
+  justify-content: flex-end;
+}
+
+.u-flex--center-middle {
+  align-items: center;
+  justify-content: center;
+}
+
+.u-flex--bottom {
+  align-items: flex-end;
+}

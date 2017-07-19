@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for entry in craft.entries.section('home') %}
+  <url>
+    <loc>{{ entry.url }}</loc>
+    <lastmod>{{ entry.postDate }}</lastmod>
+    <changefreq>{{ changefreq }}</changefreq>
+    <priority>{{ priority }}</priority>
+  </url>
+  {% endfor %}
+</urlset>

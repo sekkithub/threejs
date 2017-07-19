@@ -1,0 +1,14 @@
+{% extends (craft.request.isAjax and not craft.request.isLivePreview) ? "_ajax-layout" : "_layout" %}
+
+{% set seomaticSiteMeta = seomaticSiteMeta|merge({
+  'title': siteName,
+  'siteSeoTitlePlacement': ''
+}) %}
+
+{% block content %}
+  <div class="o-wrapper  u-constrain">
+    <h1 class="o-heading">The Neighbourhood Base Craft</h1>
+    <i class="btb bt-angle-right"></i>
+  </div>
+
+{% endblock %}

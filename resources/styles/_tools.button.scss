@@ -1,0 +1,43 @@
+/* =======================
+   Tools/Button
+   ======================= */
+
+@mixin button-color-light {
+  border: 1px solid $base-text-color-light;
+  color: $base-text-color-light;
+
+  &:hover {
+    background-color: $base-text-color-light;
+    color: $base-text-color-dark;
+  }
+}
+
+@mixin button-color-dark {
+  border: 1px solid $base-text-color-dark;
+  color: $base-text-color-dark;
+
+  &:hover {
+    background-color:$base-text-color-dark;
+    color: $base-text-color-light;
+  }
+}
+
+@mixin button-color-white {
+  border: 1px solid color(white);
+  color: color(white);
+
+  &:hover {
+    background-color: color(white);
+    color: $base-text-color-dark;
+  }
+}
+
+@mixin button-color-red-full {
+  background-color: color(red-pale);
+  color: color(white);
+
+  &:hover {
+    background-color: darken(color(red-pale), 20%);
+    color: color(white);
+  }
+}

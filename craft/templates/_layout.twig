@@ -1,0 +1,19 @@
+{% minify %}
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  {% hook 'seomaticRender' %}
+  <link rel="stylesheet" href="{{ craft.config.devMode ? '/styles/main.css' ? rev('/styles/main.css') }}" media="screen, projection"/>
+</head>
+
+<body data-section="{{ (entry.section is defined and entry.section.handle is defined) ? entry.section.handle : 'generic' }}">
+  {% include '_components/header' %}
+  <div class="c-container  js-container">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <script src="{{ craft.config.devMode ? '/scripts/main.js' ? rev('/scripts/main.js') }}"></script>
+</body>
+</html>
+{% endminify %}

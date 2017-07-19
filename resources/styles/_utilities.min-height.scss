@@ -1,0 +1,9 @@
+/* =======================
+   Utilities/Min Height
+   ======================= */
+
+.u-min-height-mobile {
+  @include mq($until: tablet) {
+    min-height: 300px;
+  }
+}

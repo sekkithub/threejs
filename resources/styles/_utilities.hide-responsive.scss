@@ -1,0 +1,28 @@
+/* =======================
+   Utilities/Hide Responsive
+   ======================= */
+
+@if (variable-exists(mq-breakpoints)) {
+  @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+    @include mq($from: $inuit-bp-name) {
+      .u-hidden\@#{$inuit-bp-name} {
+        display: none !important;
+      }
+      .u-shown\@#{$inuit-bp-name} {
+        display: inherit !important;
+      }
+
+      .u-display-block.u-shown\@#{$inuit-bp-name} {
+        display: block !important;
+      }
+
+      .u-display-inline-block.u-shown\@#{$inuit-bp-name} {
+        display: inline-block !important;
+      }
+
+      .u-display-inline.u-shown\@#{$inuit-bp-name} {
+        display: inline !important;
+      }
+    }
+  }
+}

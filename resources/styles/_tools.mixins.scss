@@ -1,0 +1,10 @@
+/* =======================
+   Tools/Mixins
+   ======================= */
+
+@mixin hide_last_margin {
+  p:last-child {
+    margin-bottom:0
+  }
+}
+

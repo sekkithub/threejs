@@ -1,0 +1,11 @@
+/* =======================
+   Settings/Colors
+   ======================= */
+
+$colors: (
+  white: #ffffff,
+  black: #000000
+);
+
+$base-text-color-dark: map-get($colors, 'black');
+$base-text-color-light: map-get($colors, 'white');

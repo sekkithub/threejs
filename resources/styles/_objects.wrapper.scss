@@ -1,0 +1,35 @@
+/* =======================
+   Objects/Wrapper
+   ======================= */
+
+.o-wrapper {
+  max-width:none;
+  padding-left: $unit;
+  padding-right: $unit;
+}
+
+.o-wrapper--large {
+  @include mq($from:tablet) {
+    padding-right: $unit-large;
+    padding-left:  $unit-large;
+  }
+}
+
+.o-wrapper--huge {
+  @include mq($from:tablet) {
+    padding-right: $unit-large;
+    padding-left:  $unit-large;
+  }
+
+  @include mq($from:desktop) {
+    padding-right: $unit-huge;
+    padding-left:  $unit-huge;
+  }
+}
+
+.o-wrapper--flush-mobile {
+  @include mq($until:tablet) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
