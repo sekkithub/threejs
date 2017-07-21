@@ -1,13 +1,13 @@
-import THREE from 'three';
+// import THREE from 'three';
 import ee from './ee';
 
-let scene;
-let camera;
-let renderer;
-
-let geometry;
-let material;
-let mesh;
+// let scene;
+// let camera;
+// let renderer;
+//
+// let geometry;
+// let material;
+// let mesh;
 
 // function initThree() {
 //   scene = new THREE.Scene();
@@ -26,7 +26,7 @@ let mesh;
 //
 //   document.body.appendChild(renderer.domElement);
 // }
-
+//
 // function animate() {
 //   requestAnimationFrame(animate);
 //
@@ -37,7 +37,7 @@ let mesh;
 // }
 
 function init() {
-  console.log('three');
+  // console.log('three');
   // initThree();
   // animate();
 }

@@ -46,7 +46,6 @@
       display: inline-block;
       text-align: center;
       text-transform: uppercase;
-      @include font-family(bold);
       @include font-size(14px);
     }
 

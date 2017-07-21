@@ -25,7 +25,7 @@ if (mix.inProduction) {
 }
 
 mix.browserSync({
-  proxy: 'base-craft.dev',
+  proxy: 'threejs.dev',
   files: ['craft/templates/**/*.twig', 'public/styles/**/*.css', 'public/scripts/**/*.js']
 });
 

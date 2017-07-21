@@ -14,27 +14,7 @@
   @if ($font-weight == "heavy")         { font-weight: 900; }
 }
 
-@font-face {
-  font-family: "LLCircularWeb-Bold";
-  src: 	 url("/fonts/CircularStd-Bold/lineto-circular-bold-c.eot");
-  src: 	 url("/fonts/CircularStd-Bold/lineto-circular-bold-c.eot?#iefix") format("embedded-opentype"),
-  url("/fonts/CircularStd-Bold/lineto-circular-bold-c.woff") format("woff"),
-  url("/fonts/CircularStd-Bold/lineto-circular-bold-c.ttf") format("truetype"),
-  url("/fonts/CircularStd-Bold/lineto-circular-bold-c.svg#LLCircularWeb-Bold") format("svg");
-}
-
-@font-face {
-  font-family: "LLCircularWeb-Book";
-  src: 	 url("/fonts/CircularStd-Book/lineto-circular-book-c.eot");
-  src: 	 url("/fonts/CircularStd-Book/lineto-circular-book-c.eot?#iefix") format("embedded-opentype"),
-  url("/fonts/CircularStd-Book/lineto-circular-book-c.woff") format("woff"),
-  url("/fonts/CircularStd-Book/lineto-circular-book-c.ttf") format("truetype"),
-  url("/fonts/CircularStd-Book/lineto-circular-book-c.svg#LLCircularWeb-Book") format("svg");
-}
-
 @mixin font-family($font-family) {
-  @if ($font-family == "book") { font-family: 'LLCircularWeb-Book', Arial, sans-serif; }
-  @if ($font-family == "bold") { font-family: 'LLCircularWeb-Bold', Arial, sans-serif; }
 }
 
 @mixin font-size($args...) {
