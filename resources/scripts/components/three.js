@@ -21,9 +21,10 @@ function initThree() {
   scene.background = new THREE.Color(0x222222);
 
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-  camera.position.z = 1000;
+  camera.position.z = 30;
 
-  geometry = new THREE.BoxGeometry(200, 200, 200);
+
+  geometry = new THREE.TorusGeometry(10, 3, 16, 50);
   material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
 
   mesh = new THREE.Mesh(geometry, material);
