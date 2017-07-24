@@ -27,9 +27,9 @@ return array(
 
     '.dev' => array(
         'devMode' => true,
-        'siteUrl' => 'http://base-craft.dev',
+        'siteUrl' => 'http://threejs.dev',
         'environmentVariables' => array(
-          'baseUrl' => 'http://base-craft.dev',
+          'baseUrl' => 'http://threejs.dev',
           'basePath' => '../public/'
         ),
         'environment' => 'dev'

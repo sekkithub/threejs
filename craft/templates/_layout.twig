@@ -8,11 +8,11 @@
 </head>
 
 <body data-section="{{ (entry.section is defined and entry.section.handle is defined) ? entry.section.handle : 'generic' }}">
-  {% include '_components/header' %}
   <div class="c-container  js-container">
     {% block content %}
     {% endblock %}
   </div>
+  {% include '_components/canvas' %}
   <script src="{{ craft.config.devMode ? '/scripts/main.js' ? rev('/scripts/main.js') }}"></script>
 </body>
 </html>
