@@ -5,9 +5,14 @@ let scene;
 let camera;
 let renderer;
 
+let light;
+
 let geometry;
 let material;
 let mesh;
+
+let mouseX = 0;
+let mouseY = 0;
 
 function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -16,18 +21,43 @@ function onWindowResize() {
   renderer.render(scene, camera);
 }
 
+function rotateScene(deltaX, deltaY) {
+  mesh.rotation.y += deltaX / 2000;
+  mesh.rotation.x += deltaY / 1000;
+}
+
+function onDocumentMouseMove(event) {
+  const deltaX = event.clientX - mouseX;
+  const deltaY = event.clientY - mouseY;
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+  rotateScene(deltaX, deltaY);
+}
+
 function initThree() {
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x222222);
+  scene.background = new THREE.Color(0x1a1a1a);
 
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-  camera.position.z = 30;
+  light = new THREE.DirectionalLight(0xffffff);
+  light.position.set(1, 1, 1);
+  scene.add(light);
 
+  light = new THREE.DirectionalLight(0xffffff);
+  light.position.set(-1, -1, -1);
+  scene.add(light);
+
+  light = new THREE.AmbientLight(0x222222);
+  scene.add(light);
+
+  camera = new THREE.PerspectiveCamera(1.4, window.innerWidth / window.innerHeight, 5, 100000);
+  camera.position.z = 1400;
 
   geometry = new THREE.TorusGeometry(10, 3, 16, 50);
-  material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
+  material = new THREE.MeshPhongMaterial({ color: 0x828282, wireframe: true });
 
   mesh = new THREE.Mesh(geometry, material);
+  mesh.rotation.x = -(Math.PI * 0.2);
+  mesh.rotation.y = -(Math.PI * 0.2);
   scene.add(mesh);
 
   renderer = new THREE.WebGLRenderer();
@@ -39,15 +69,17 @@ function initThree() {
   container.appendChild(renderer.domElement);
 
   window.addEventListener('resize', onWindowResize, false);
+  document.addEventListener('mousemove', onDocumentMouseMove, false);
+}
+
+function render() {
+  camera.lookAt(scene.position);
+  renderer.render(scene, camera);
 }
 
 function animate() {
   requestAnimationFrame(animate);
-
-  mesh.rotation.x += 0.01;
-  mesh.rotation.y += 0.02;
-
-  renderer.render(scene, camera);
+  render();
 }
 
 function init() {
