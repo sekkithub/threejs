@@ -110,11 +110,9 @@ function render() {
 
   const newQuaternion = new THREE.Quaternion();
   THREE.Quaternion.slerp(mesh.quaternion, q, newQuaternion, 0.07);
-  // console.log(mesh);
-  // var newRotation = new THREE.Euler().setFromQuaternion(newQuaternion, 'XYZ');
-  // console.log(newRotation);
-  mesh.applyQuaternion(newQuaternion.normalize());
-  // mesh.quaternion.normalize();
+  // mesh.quaternion = newQuaternion;
+  // console.log(newQuaternion);
+  mesh.quaternion.normalize();
 
   renderer.render(scene, camera);
 }
