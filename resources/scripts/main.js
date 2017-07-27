@@ -2,7 +2,7 @@ import FastClick from 'fastclick';
 import domready from 'domready';
 import ee from './components/ee';
 
-import './components/three';
+import './components/quaternionRotation';
 
 FastClick.attach(document.body);
 

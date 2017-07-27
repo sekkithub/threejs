@@ -11,7 +11,7 @@ $dev = array(
     'server' => 'localhost',
     'user' => 'root',
     'password' => '',
-    'database' => 'basecraft_dev');
+    'database' => 'webgl_dev');
 
 $develop = array(
     'server' => 'localhost',
