@@ -109,7 +109,7 @@ function render() {
   const q = new THREE.Quaternion().setFromEuler(v);
 
   const newQuaternion = new THREE.Quaternion();
-  THREE.Quaternion.slerp(mesh.quaternion, q, newQuaternion, 0.07);
+  THREE.Quaternion.slerp(mesh.quaternion, q, newQuaternion, 0.1);
   mesh.quaternion.slerp(newQuaternion, 0.1);
 
   renderer.render(scene, camera);
