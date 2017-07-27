@@ -105,16 +105,12 @@ function render() {
   vector = new THREE.Vector3();
   rotateQuaternion.setFromAxisAngle(vector, step);
 
-  const v = new THREE.Euler(mouse2D.y, -mouse2D.x, 0);
+  const v = new THREE.Euler(-mouse2D.y, mouse2D.x, 0);
   const q = new THREE.Quaternion().setFromEuler(v);
 
   const newQuaternion = new THREE.Quaternion();
   THREE.Quaternion.slerp(mesh.quaternion, q, newQuaternion, 0.07);
-  // console.log(mesh);
-  // var newRotation = new THREE.Euler().setFromQuaternion(newQuaternion, 'XYZ');
-  // console.log(newRotation);
-  mesh.applyQuaternion(newQuaternion.normalize());
-  // mesh.quaternion.normalize();
+  mesh.quaternion.slerp(newQuaternion, 0.1);
 
   renderer.render(scene, camera);
 }
